@@ -3,19 +3,9 @@
   "version": "0.1.19",
   "private": true,
   "scripts": {
-    "build": "node script-build-local",
-    "prebuild": "npm install",
-    "build:ci": "node script-build-local",
-    "build:npm": "node script-build-npm",
-    "prebuild:npm": "npm install",
-    "build:npm:report": "vue-cli-service build --target lib --formats commonjs --name ipa-design-system ./src/library.ts --mode report",
-    "prebuild:npm:report": "npm install",
-    "send": "npm install && npm run build:npm && ./script-publish.sh",
-    "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit --watch",
     "storybook": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
     "storybook:build": "vue-cli-service storybook:build -c config/storybook",
-    "watch": "vue-cli-service build --watch --target lib --formats commonjs --name ipa-design-system ./src/library.ts"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.31",
