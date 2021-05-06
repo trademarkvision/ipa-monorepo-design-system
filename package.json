@@ -5,7 +5,7 @@
   "scripts": {
     "test:unit": "vue-cli-service test:unit --watch",
     "storybook": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
-    "storybook:build": "vue-cli-service storybook:build -c config/storybook",
+    "storybook:build": "vue-cli-service storybook:build -c config/storybook"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.31",
