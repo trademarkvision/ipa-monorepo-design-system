@@ -1,0 +1,177 @@
+// Base table
+table {
+  width: 100%;
+  border-spacing: 0;
+  font-size: .9rem;
+
+  @include border-radius();
+  @include baseShadow(nth($greys, 2), 2px);
+
+  thead {
+    tr {
+      background: #EAEAEA;
+      @include border-radius(2px 2px 0 0);
+
+      td {
+        padding: .6rem;
+        font-weight: bold;
+
+        &.sortable {
+          cursor: pointer;
+
+          span {
+            font-size: .9rem;
+          }
+        }
+
+        span {
+          font-size: .75rem;
+        }
+
+        &:first-of-type {
+          @include border-radius(2px 0 0 0);
+        }
+
+        &:last-of-type {
+          @include border-radius(0 2px 0 0);
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      transition: all 0.3s ease;
+      background: $white;
+
+      &.clickable {
+        cursor: pointer;
+
+        &:hover {
+          background: #fafafa;
+        }
+      }
+
+      td {
+        padding: .5rem;
+        border-bottom: 1px solid #eee;
+
+        &.index {
+          width: 15px;
+          text-align: right;
+        }
+      }
+
+      &:last-of-type {
+        td {
+          &:first-of-type {
+            @include border-radius(0 0 0 2px);
+          }
+
+          &:last-of-type {
+            @include border-radius(0 0 2px 0);
+          }
+        }
+      }
+    }
+  }
+}
+
+//tables
+table.dashboards {
+  margin-top: 2rem;
+  width: 100%;
+  border-spacing: 0;
+  font-size: .9rem;
+
+  @include border-radius();
+  @include baseShadow(nth($greys, 2), 2px);
+
+  thead {
+    tr {
+      height: 52px;
+      background: #EAEAEA;
+      @include border-radius(2px 2px 0 0);
+
+      td {
+        padding: .6rem;
+        font-weight: bold;
+
+        &.sortable {
+          cursor: pointer;
+
+          span {
+            font-size: .9rem;
+
+            .sort-icons span svg {
+              width: 0.45rem !important;
+              vertical-align: -0.20em !important;
+              padding-left: 0.25rem !important;
+            }
+
+            .sort-icons .down-sort svg {
+              vertical-align: 0px !important;
+            }
+
+            .sort-icons .up-sort svg {
+              vertical-align: -5px !important;
+            }
+
+            svg {
+              width: 0.45rem !important;
+            }
+          }
+        }
+
+        span {
+          font-size: .75rem;
+        }
+
+        &:first-of-type {
+          @include border-radius(2px 0 0 0);
+        }
+
+        &:last-of-type {
+          @include border-radius(0 2px 0 0);
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      transition: all 0.3s ease;
+      background: $white;
+
+      &.clickable {
+        cursor: pointer;
+
+        &:hover {
+          background: #FAFAFA;
+        }
+      }
+
+      td {
+        padding: .5rem;
+        border-bottom: 1px solid #EEE;
+
+        &.index {
+          width: 15px;
+          text-align: right;
+        }
+      }
+
+      &:last-of-type {
+        td {
+          &:first-of-type {
+            @include border-radius(0 0 0 2px);
+          }
+
+          &:last-of-type {
+            @include border-radius(0 0 2px 0);
+          }
+        }
+      }
+    }
+  }
+}

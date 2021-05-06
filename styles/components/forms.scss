@@ -1,0 +1,59 @@
+@mixin baseInputStyle() {
+  width: 100%;
+  min-height: $inputHeight;
+  font-size: .9rem;
+  padding: .5rem;
+  border: 1px solid #AAB4C1;
+  border-radius: 3px;
+  outline: none;
+
+  &:focus,
+  &:active {
+    border-color: $ipaTeal;
+    box-shadow: none;
+  }
+
+  &.orange {
+    border-color: $ipaYellow;
+    box-shadow: none;
+  }
+
+  &.red {
+    border-color: darken($ipaRed, 5%);
+    box-shadow: none;
+  }
+
+  &.green {
+    border-color: $ipaMint;
+    box-shadow: none;
+  }
+}
+
+form {
+
+  label, legend {
+    font-size: .9rem;
+    font-weight: 300;
+  }
+
+  textarea {
+    @include baseInputStyle();
+  }
+
+  input {
+    &[type="text"],
+    &[type="email"],
+    &[type="tel"] {
+      @include baseInputStyle();
+    }
+
+    &::placeholder {
+      font-size: .9rem;
+    }
+
+    &::-ms-clear {
+      display: none;
+    }
+  }
+
+}

@@ -1,0 +1,196 @@
+@import "../definitions";
+
+@mixin dropdown-button-base {
+  display: block;
+  text-align: left;
+  line-height: 50px;
+  width: 100%;
+  font-size: .9rem;
+  padding: 0 10px;
+  color: $ipaCharcoal;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(58, 58, 58, 0.1);
+  cursor: pointer;
+  border-radius: 0;
+  &:hover, &:focus, &:active {
+    background: $ipaCharcoal;
+    color: $white;
+  }
+
+  &.thin {
+    line-height: 40px;
+  }
+  &.nolink {
+    cursor: inherit;
+  }
+  &.first {
+    @include border-radius(2px 2px 0 0);
+  }
+  &.delete {
+    @include border-radius(0 0 2px 2px);
+    &:hover {
+      background: $ipaCharcoal;
+    }
+  }
+  i, svg {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    &.u {
+      width: auto;
+    }
+  }
+}
+
+.dropdown-holder {
+
+  display: inline-block;
+  position: relative;
+
+  button {
+    background: none;
+    height: $headerHeight;
+    &.user-menu {
+      &.main-menu {
+        border-left: 1px solid rgba(228, 228, 228, 0.34) !important;
+        width: $headerHeight;
+      }
+      &:hover {
+        & + .dropdown-menu {
+          display: block;
+        }
+      }
+      &.unsaved {
+        color: $ipaCharcoal;
+      }
+      &.alerts-button {
+        position: relative;
+        span {
+          position: absolute;
+          text-align: center;
+          border-radius: 50%;
+          display: block;
+          color: $white;
+          width: 15px;
+          height: 15px;
+          top: calc(50% - 1.1rem);
+          right: calc(50% - 1.1rem);
+          background: $ipaRed;
+          max-width: 20px !important;
+          font-size: 0.7rem;
+          overflow: visible;
+          line-height: 14px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  &:hover, &.expanded {
+    button {
+      &.user-menu {
+      color: $ipaCharcoal !important;
+        &, &:hover, &:active {
+          color: $ipaCharcoal;
+          background: $white;
+        }
+      }
+    }
+    .dropdown-menu {
+      top: 0;
+      display: block;
+    }
+    &:after {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  &.unsaved {
+    &:after {
+      background: $ipaCharcoal;
+    }
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    z-index: 1000;
+    top: -9999px;
+    right: 0px;
+    display: none;
+    &:hover {
+      top: 0;
+      display: block;
+    }
+
+    &.results-dropdown-menu {
+      .content {
+        top: 15px;
+      }
+    }
+
+    .content {
+      background-color: $white;
+      color: $ipaCharcoal;
+      width: 230px;
+      position: absolute;
+      right: 0;
+      overflow-x: hidden;
+      @include baseShadow(rgba($fetchPrimary, .5), 2px, false, 0 1px);
+      @include border-radius(0 0 2px 2px);
+      a, button {
+        &.dropdown-button {
+          @include dropdown-button-base();
+        }
+      }
+    }
+    &.left {
+      left: 0;
+      right: auto;
+      .content {
+        left: 0;
+        right: auto;
+      }
+    }
+    &.right {
+      .content {
+        right: -5px;
+        top: 73px;
+      }
+    }
+  }
+}
+
+.dropdown-menu {
+  &.this-mark {
+    .content {
+      padding: 10px;
+      width: 300px;
+      top: #{$headerHeight - 1};
+      right: -1px;
+      div {
+        display: block;
+        text-align: left;
+        clear: both;
+        width: 100%;
+        white-space: initial;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 20px;
+
+        span.title {
+          font-size: .7em;
+          opacity: .7;
+          display: block;
+          line-height: 12px;
+          padding-top: 8px;
+          padding-bottom: 4px;
+        }
+        span {
+          font-size: .9rem;
+        }
+      }
+    }
+  }
+}

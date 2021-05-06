@@ -1,0 +1,195 @@
+//*** styling for text inputs ***//
+//  *span is used for input title and is optional.
+
+.input-row {
+  display: flex;
+  flex-direction: row;
+
+  span {
+    flex: auto 0 150px;
+    line-height: $inputHeight;
+    padding-right: 26px;
+    text-align: right;
+  }
+}
+
+form {
+  input {
+    &[type="text"],
+    &[type="password"],
+    &[type="email"],
+    &[type="tel"] {
+      @include dsInput();
+
+      &.multiselect__input {
+        border: 0;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 0;
+      }
+    }
+  }
+}
+
+input {
+  color: $secondary;
+}
+
+.multiselect__single {
+  font-size: .9rem;
+  background: transparent !important;
+}
+
+.multiselect__tags {
+  border: 1px solid $grey;
+  border-radius: 3px;
+  padding: 8px $inputHeight 0 16px;
+  transition: all 0.3s ease;
+}
+
+.multiselect:focus {
+  border: 1px solid $secondary;
+}
+
+.multiselect__option--selected.multiselect__option--highlight,
+.multiselect__option--selected,
+.multiselect__option--selected:after {
+  background: $grey;
+  color: $white;
+}
+
+.multiselect__option--highlight,
+.multiselect__option--highlight:after {
+  background: $positive;
+}
+
+.multiselect__option--selected.multiselect__option--highlight:after {
+  background: $grey;
+}
+
+.multiselect__input::placeholder {
+  color: #767676;
+}
+
+.multiselect__placeholder {
+  color: #767676;
+  font-size: .9rem;
+  margin: 0;
+  padding: 2px 0 0;
+}
+
+.multiselect__content-wrapper {
+  border: 1px solid $secondary;
+  border-top: 0;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.multiselect--above .multiselect__content-wrapper {
+  border-top: 1px solid $dark;
+}
+
+.multiselect--active .multiselect__tags {
+  border: 1px solid $secondary;
+}
+
+.multiselect__single {
+  padding-left: 0;
+}
+
+:focus {
+  outline: -webkit-focus-ring-color auto 3px;
+}
+
+// additional css
+.mx-input {
+  color: $secondary;
+}
+
+.mx-calendar {
+  color: $secondary;
+  transition: all 0.3s ease;
+
+  .cell:hover {
+    background-color: $primary;
+    color: #FFFFFF;
+  }
+}
+
+@mixin checkboxLabel() {
+  display: inline-block;
+  line-height: 20px;
+  position: relative;
+  padding-left: 24px;
+
+  &.checked {
+    &:after {
+      content: ' ';
+    }
+  }
+  &:not(.checked) {
+    &:after {
+      content: none;
+    }
+  }
+
+  &:before, &:after {
+    content: ' ';
+    display: inline-block;
+    position: absolute;
+  }
+
+  &:before {
+    border-radius: 3px;
+    border: 2px solid $primary;
+    height: 16px;
+    left: 0;
+    top: 0;
+    width: 16px;
+  }
+
+  &:after {
+    border-left: 2px solid $primary;
+    border-bottom: 2px solid $primary;
+    height: 5px;
+    left: 4px;
+    top: 5px;
+    transform: rotate(-45deg);
+    width: 9px;
+  }
+}
+
+//**** Styling for checkboxes ****//
+.checkbox {
+  margin-bottom: 1rem;
+
+  input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+
+    &:not(:checked) + label:after {
+      content: none;
+    }
+
+    &:checked + label:after {
+      content: ' ';
+    }
+  }
+
+  label {
+    @include checkboxLabel();
+  }
+}
+
+label.checkbox {
+  @include checkboxLabel();
+}
+
+input::placeholder, textarea::placeholder {
+  color: #767676 !important;
+  opacity: 1 !important;
+}

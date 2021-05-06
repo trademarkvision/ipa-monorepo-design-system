@@ -1,0 +1,270 @@
+@mixin base-button() {
+  cursor: pointer;
+  font-size: .9rem;
+  height: $buttonHeight;
+  outline: none;
+  background: $white;
+  border: 1px solid $grey;
+  border-radius: $borderRadius;
+  padding: 0 1rem;
+  font-weight: 600;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition: all .1s ease;
+  transition-property: border, background, color, box-shadow, outline;
+
+  &:hover {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    color: $white;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 3pt 2pt rgba(90, 182, 253, 1);
+  }
+  span {
+    margin-right: 6px;
+  }
+}
+
+input[type="submit"], button, a.button {
+  @include base-button();
+
+  &.primary, &.blue {
+    border-color: $primary;
+    color: $primary;
+
+    &.large {
+      min-width: 255px;
+    }
+
+    &:not(.disabled):not([disabled="disabled"]) {
+      &:hover {
+        background: $primary;
+        color: $white;
+      }
+    }
+
+    &.fill {
+      background: $primary;
+      border: 1px solid $primary;
+      color: $white;
+
+      &:not(.disabled):not([disabled="disabled"]) {
+        &:hover {
+          background: $white;
+          border: 1px solid $primary;
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  &.secondary {
+    border-color: $secondary;
+    color: $secondary;
+
+    &:not(.disabled):not([disabled="disabled"]) {
+      &:hover {
+        background: $secondary;
+        color: $white;
+      }
+    }
+
+    &.fill {
+      background: $secondary;
+      border: 1px solid $secondary;
+      color: $white;
+
+      &:not(.disabled):not([disabled="disabled"]) {
+        &:hover {
+          background: $white;
+          border: 1px solid $secondary;
+          color: $secondary;
+        }
+      }
+    }
+  }
+
+  &.icon {
+    border-color: $primary;
+    color: $primary;
+    padding: 0;
+    width: $buttonHeight;
+
+    &:not(.disabled):not([disabled="disabled"]) {
+      &:hover {
+        background: $primary;
+        color: $white;
+      }
+    }
+
+    &.toggle {
+      border-color: $secondary;
+      color: $secondary;
+
+      &.active {
+        background: $secondary;
+        color: $white;
+
+        &:not(.disabled):not([disabled="disabled"]) {
+          &:focus {
+            box-shadow: 0 0 3pt 2pt #5AB6FD;
+          }
+        }
+      }
+
+      &:not(.disabled):not([disabled="disabled"]) {
+        &:hover {
+          background: $secondary;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &.icon-secondary {
+    border-color: $secondary;
+    color: $secondary;
+    padding: 0;
+    width: $buttonHeight;
+
+    &:not(.disabled):not([disabled="disabled"]) {
+      &:hover {
+        background: $secondary;
+        color: $white;
+      }
+    }
+  }
+
+  &.alert, &.red {
+    border-color: $alert;
+    color: $alert;
+
+    &:not(.disabled):not([disabled="disabled"]) {
+      &:hover {
+        background: $alert;
+        color: $white;
+      }
+    }
+  }
+
+  &.positive, &.green {
+    border-color: $positiveDark;
+    color: $positiveDark;
+
+    &:not(.disabled):not([disabled="disabled"]) {
+      &:hover {
+        background: $positiveDark;
+        color: $white;
+      }
+    }
+  }
+
+  &.grey {
+    border-color: $darkGrey;
+    color: $darkGrey;
+
+    &:not(.disabled):not([disabled="disabled"]) {
+      &:hover {
+        background: $darkGrey;
+        color: $white;
+      }
+    }
+  }
+
+  &.pagination {
+    border-color: $primary;
+    color: $primary;
+    margin-right: 0.5rem;
+    width: $buttonHeight;
+
+    &:hover,
+    &.active {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  &.clear {
+    border-color: white;
+
+    &:hover {
+      background: none;
+      color: white;
+
+      &.secondary {
+        border-color: $secondary;
+        background: white;
+      }
+
+      &.primary {
+        border-color: $primary;
+      }
+
+      &.alert {
+        border-color: $alert;
+      }
+    }
+  }
+
+  &.no-border {
+    &.no-fill {
+      border: 1px solid transparent;
+    }
+  }
+
+  &.square {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    text-align: center;
+  }
+
+  &.no-size {
+    padding: 0;
+    text-align: center;
+  }
+
+  &.no-pointer {
+    cursor: auto;
+
+    &.no-fill:hover {
+      color: inherit;
+      background: inherit;
+    }
+  }
+
+  &.no-shadow {
+    border: 0;
+    box-shadow: none;
+  }
+
+  &.no-padding {
+    padding: 0;
+  }
+
+  &.transparent {
+    background: none !important;
+    border: none !important;
+    box-shadow: none;
+    padding: 6px 6px;
+
+    &:not(.disabled):not([disabled="disabled"]) {
+      &:hover {
+        color: $ipaCharcoal;
+      }
+    }
+  }
+
+  // Using !important here as we don't want this to be overwritten for AA purpose.
+  // Use additional classes to change disabled state in your CSS :)
+  &.disabled, &[disabled="disabled"] {
+    border-color: $darkGrey !important;
+    color: $ipaCharcoal !important;
+    background: $grey !important;
+    cursor: default;
+    opacity: .7;
+  }
+}

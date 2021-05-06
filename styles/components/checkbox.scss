@@ -1,0 +1,118 @@
+input[type="checkbox"]:not(.toggle-checkbox) {
+  display: none;
+  $checkboxSize: 15px;
+
+  & + label {
+    position: relative;
+    margin-left: $checkboxSize + 7px;
+    transition: all 0.3s ease;
+
+    &:before {
+      content: ' ';
+      position: absolute;
+      width: $checkboxSize;
+      height: $checkboxSize;
+      left: -#{$checkboxSize + 7px};
+      top: 0;
+      border-radius: 3px;
+      border: 2px solid $ipaLinkBlue;
+    }
+  }
+
+  &:checked {
+    & + label {
+      &:before {
+        background: $ipaLinkBlue;
+      }
+
+      &:after {
+        content: ' ';
+        position: absolute;
+        width: $checkboxSize;
+        height: $checkboxSize;
+        left: -#{$checkboxSize + 5px};
+        top: 2px;
+        border-radius: 3px;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4gICAgPHBhdGggZmlsbD0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSI0MCIgc3Ryb2tlPSJ3aGl0ZSIgICAgICAgICAgZD0iTTQzNS44NDggODMuNDY2TDE3Mi44MDQgMzQ2LjUxbC05Ni42NTItOTYuNjUyYy00LjY4Ni00LjY4Ni0xMi4yODQtNC42ODYtMTYuOTcxIDBsLTI4LjI4NCAyOC4yODRjLTQuNjg2IDQuNjg2LTQuNjg2IDEyLjI4NCAwIDE2Ljk3MWwxMzMuNDIxIDEzMy40MjFjNC42ODYgNC42ODYgMTIuMjg0IDQuNjg2IDE2Ljk3MSAwbDI5OS44MTMtMjk5LjgxM2M0LjY4Ni00LjY4NiA0LjY4Ni0xMi4yODQgMC0xNi45NzFsLTI4LjI4NC0yOC4yODRjLTQuNjg2LTQuNjg2LTEyLjI4NC00LjY4Ni0xNi45NyAweiIvPjwvc3ZnPg==);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 75%;
+      }
+    }
+  }
+
+  &.green {
+    & + label {
+      &:before {
+        border-color: $darkGreen;
+      }
+    }
+
+    &:checked {
+      & + label {
+        &:before {
+          background: $darkGreen;
+        }
+      }
+    }
+  }
+}
+
+input[type="checkbox"].toggle-checkbox {
+
+  & + label {
+    position: relative;
+    display: block;
+    height: 20px;
+    width: 36px;
+    background: #CCCCCC;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 0;
+
+    &:after {
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      display: block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+      content: '';
+      transition: all 0.3s ease;
+    }
+
+    &:active:after {
+      transform: scale(1.15, 0.85);
+    }
+  }
+
+  &:checked + label {
+    background: #3264B7;
+
+    &:after {
+      left: 20px;
+      background: #FFFFFF;
+    }
+  }
+
+  &:disabled + label {
+    background: #D5D5D5;
+    pointer-events: none;
+
+    &:after {
+      background: #BCBDBC;
+    }
+  }
+}
+
+.extract-all {
+  label {
+    &:before {
+      border: 2px solid #FFFFFF !important;
+    }
+  }
+}

@@ -1,0 +1,142 @@
+// Colors
+$RioGreen: #357C23;
+$positiveDark: #34833B;
+$darkGreen: #328323;
+$ipaMint: #32A03C;
+$positive: #44AA4D;
+
+$ipaRed: #DC3416;
+$alert: #DC3416;
+$RioRed: #B13C3A;
+$red: #E2574C;
+
+$dark: #1D252C;
+$ipaCharcoal: #0D252C;
+$ipaDarkCharcoal: #1D252C;
+$darkGrey: #666666;
+$grey: #C3C3C3;
+$ipaGrey: #B6BEC0;
+$lightGrey: #EAEAEA;
+
+$ipaLinkBlue: #0972D9;
+$primary: #1976D2;
+$ipaTeal: #00819C;
+
+$ipaPurple: #5D2067;
+$ipaViolet: #704579;
+
+$ipaYellow: #DC7516;
+$warning: #F1AC1E;
+$orange: #F7BC16;
+
+$secondary: #35495E;
+$steelBlue: #738CA2;
+$white: #FFF;
+
+
+$ipaCharcoalPalette: (
+  lighten($ipaDarkCharcoal, 80%) lighten($ipaDarkCharcoal, 60%) lighten($ipaDarkCharcoal, 40%) lighten($ipaDarkCharcoal, 20%)
+);
+$ipaGreyPalette: (
+  lighten($ipaGrey, 80%) lighten($ipaGrey, 60%) lighten($ipaGrey, 40%) lighten($ipaGrey, 20%)
+);
+$ipaGreyPaletteDark: (
+  darken($ipaGrey, 80%) darken($ipaGrey, 60%) darken($ipaGrey, 40%) darken($ipaGrey, 20%)
+);
+
+$greys: (
+  #E7E7E7 #F5F5F5 #FAFAFA
+);
+
+$headerImageHeight: 3rem;
+$fetchPrimary: nth($ipaCharcoalPalette, 4);
+$fetchGreyOne: nth($ipaGreyPalette, 1);
+
+$headerHeight: 60px !default;
+$headerStatusHeight: 1.7rem !default;
+$borderRadius: 3px !default;
+$inputHeight: 40px !default;
+$buttonHeight: 35px;
+
+$maxWidth: 73.5rem; // ~1280px
+
+@mixin dsInputFocus() {
+  outline: none;
+  border: 1px solid $secondary;
+}
+
+@mixin dsInput() {
+  border-radius: 3px;
+  border: 1px solid $grey;
+  color: $secondary;
+  font-size: .9rem;
+  flex: 1 auto;
+  height: calc(#{$inputHeight} - 2px);
+  margin-bottom: 10px;
+  padding: 0 16px;
+  transition: all 0.3s ease;
+
+  &:focus {
+    @include dsInputFocus();
+  }
+}
+
+@mixin dsPill($bgColor: $secondary) {
+  flex: auto 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  margin-right: 10px;
+  padding: 0 0.5rem;
+  border-radius: 20px;
+  background: $bgColor;
+  color: white;
+  font-size: 0.8rem;
+  line-height: 28px;
+
+  .delete-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-left: 0.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      background: white;
+      color: $bgColor;
+    }
+  }
+}
+
+@mixin border-radius($baseBorderRadius: 2px) {
+  -webkit-border-radius: $baseBorderRadius;
+  -moz-border-radius: $baseBorderRadius;
+  border-radius: $baseBorderRadius;
+}
+
+@mixin easeTransition($prop: all, $time: .5s, $ttype: ease) {
+  -webkit-transition: $prop $time $ttype;
+  -moz-transition: $prop $time $ttype;
+  -ms-transition: $prop $time $ttype;
+  -o-transition: $prop $time $ttype;
+  transition: $prop $time $ttype;
+}
+
+@mixin multiTransition($ts) {
+  -webkit-transition: $ts;
+  -moz-transition: $ts;
+  -ms-transition: $ts;
+  -o-transition: $ts;
+  transition: $ts;
+}
+
+@mixin baseShadow($color: $fetchGreyOne, $shadowSize: 5px, $border: true, $position: 0 0) {
+  box-shadow: $color $position $shadowSize;
+  @if $border {
+    border: 1px solid $color;
+  }
+}

@@ -1,0 +1,275 @@
+[
+  {
+    "groupName": "R-TMA-0",
+    "description": "Common",
+    "issues": [
+      {"strength": true, "issue": "I-TMA-2", "description": "Section 41: Descriptive"},
+      {"strength": true, "issue": "I-TMA-3", "description": "Section 41: Commonly used term"},
+      {"strength": true, "issue": "I-TMA-6", "description": "Section 41: Geographical"},
+      {"strength": true, "issue": "I-TMA-12", "description": "Section 41: Common surname"},
+      {"strength": false, "issue": "I-TMA-34", "description": "Section 42: Red Cross (Image/words)"},
+      {"strength": false, "issue": "I-TMA-109", "description": "Ownership: Trust"},
+      {"strength": false, "issue": "I-TMA-106", "description": "Ownership: Full name not provided"},
+      {"strength": false, "issue": "I-TMA-103", "description": "Ownership: Business name or trading style"},
+      {"strength": false, "issue": "I-TMA-113", "description": "Ownership: Application in name of individual(s) or company"},
+      {"strength": false, "issue": "I-TMA-105", "description": "Ownership: General"}
+    ]
+  },
+  {
+    "groupName": "R-TMA-1",
+    "description": "Section 44",
+    "issues": [
+      {"strength": false, "issue": "I-TMA-1", "description": "Citation"}
+    ]
+  },
+  {
+    "groupName": "R-TMA-2",
+    "description": "Section 41",
+    "issues": [
+      {"strength": true, "issue": "I-TMA-2", "description": "Descriptive"},
+      {"strength": true, "issue": "I-TMA-3", "description": "Commonly used term"},
+      {"strength": true, "issue": "I-TMA-4", "description": "Other"},
+      {"strength": true, "issue": "I-TMA-5", "description": "Translation"},
+      {"strength": true, "issue": "I-TMA-6", "description": "Geographical"},
+      {"strength": true, "issue": "I-TMA-7", "description": "Acronym"},
+      {"strength": true, "issue": "I-TMA-8", "description": "Letters"},
+      {"strength": true, "issue": "I-TMA-9", "description": "Number"},
+      {"strength": true, "issue": "I-TMA-10", "description": "Letter/number combination"},
+      {"strength": true, "issue": "I-TMA-11", "description": "Common full name"},
+      {"strength": true, "issue": "I-TMA-12", "description": "Common surname"},
+      {"strength": true, "issue": "I-TMA-13", "description": "Corporate name"},
+      {"strength": true, "issue": "I-TMA-14", "description": "Representation of goods"},
+      {"strength": true, "issue": "I-TMA-15", "description": "Internet domain name"},
+      {"strength": true, "issue": "I-TMA-16", "description": "Phoneword"},
+      {"strength": true, "issue": "I-TMA-17", "description": "E prefix"},
+      {"strength": true, "issue": "I-TMA-18", "description": "Smart or intelligent"},
+      {"strength": true, "issue": "I-TMA-19", "description": "Hashtag"},
+      {"strength": true, "issue": "I-TMA-20", "description": "INN"},
+      {"strength": true, "issue": "I-TMA-21", "description": "INN stem"},
+      {"strength": true, "issue": "I-TMA-22", "description": "Colour"},
+      {"strength": true, "issue": "I-TMA-23", "description": "Scent"},
+      {"strength": true, "issue": "I-TMA-24", "description": "Shape"},
+      {"strength": true, "issue": "I-TMA-25", "description": "Sound"},
+      {"strength": true, "issue": "I-TMA-26", "description": "Aspect of packaging"},
+      {"strength": true, "issue": "I-TMA-27", "description": "Plant variety"},
+      {"strength": true, "issue": "I-TMA-28", "description": "Other plant"},
+      {"strength": true, "issue": "I-TMA-29", "description": "Other wine"}
+    ]
+  },
+  {
+    "groupName": "R-TMA-3",
+    "description": "Section 177",
+    "issues": [
+      {"strength": false, "issue": "I-TMA-30", "description": "Certification mark not distinctive"}
+    ]
+  },
+  {
+    "groupName": "R-TMA-4",
+    "description": "Section 42",
+    "issues": [
+      {"strength": false, "issue": "I-TMA-31", "description": "Scandalous"},
+      {"strength": false, "issue": "I-TMA-32", "description": "Contrary to law (general)"},
+      {"strength": false, "issue": "I-TMA-33", "description": "Other"},
+      {"strength": false, "issue": "I-TMA-34", "description": "Red Cross (Image/words)"},
+      {"strength": false, "issue": "I-TMA-35", "description": "Red crescent, lion or crystal (Image/word)"},
+      {"strength": false, "issue": "I-TMA-36", "description": "Bank"},
+      {"strength": false, "issue": "I-TMA-37", "description": "Life insurance"},
+      {"strength": false, "issue": "I-TMA-38", "description": "Major sporting event"},
+      {"strength": false, "issue": "I-TMA-39", "description": "ANZAC"},
+      {"strength": false, "issue": "I-TMA-40", "description": "Defence emblem"},
+      {"strength": false, "issue": "I-TMA-41", "description": "Defence word or letters"},
+      {"strength": false, "issue": "I-TMA-42", "description": "Environment Protection and Biodiversity Conservation Act 1999"},
+      {"strength": false, "issue": "I-TMA-43", "description": "Country of Origin Food Labelling Information Standard 2016"},
+      {"strength": false, "issue": "I-TMA-44", "description": "Olympic motto or symbol"},
+      {"strength": false, "issue": "I-TMA-45", "description": "Olympic word"},
+      {"strength": false, "issue": "I-TMA-46", "description": "Plant Breeders Right"},
+      {"strength": false, "issue": "I-TMA-47", "description": "Other plant"},
+      {"strength": false, "issue": "I-TMA-48", "description": "Geographical indication (wine)"},
+      {"strength": false, "issue": "I-TMA-49", "description": "Other wine"}
+    ]
+  },
+  {
+    "groupName": "R-TMA-5",
+    "description": "Section 43",
+    "issues": [
+      {"strength": false, "issue": "I-TMA-50", "description": "Confusion (general)"},
+      {"strength": false, "issue": "I-TMA-51", "description": "Other s43"},
+      {"strength": false, "issue": "I-TMA-52", "description": "Name of a well known person"},
+      {"strength": false, "issue": "I-TMA-53", "description": "Image of a well known person"},
+      {"strength": false, "issue": "I-TMA-54", "description": "Internet domain name"},
+      {"strength": false, "issue": "I-TMA-55", "description": "Phoneword"},
+      {"strength": false, "issue": "I-TMA-56", "description": "Radio call sign or frequency"},
+      {"strength": false, "issue": "I-TMA-57", "description": "INN"},
+      {"strength": false, "issue": "I-TMA-58", "description": "INN Stem"},
+      {"strength": false, "issue": "I-TMA-59", "description": "Plant variety"},
+      {"strength": false, "issue": "I-TMA-60", "description": "Other plant"},
+      {"strength": false, "issue": "I-TMA-61", "description": "Geographical indication (wine)"},
+      {"strength": false, "issue": "I-TMA-62", "description": "Wine growing area"},
+      {"strength": false, "issue": "I-TMA-63", "description": "Other wine"}
+    ]
+  },
+  {
+    "groupName": "R-TMA-6",
+    "description": "Section 39",
+    "issues": [
+      {"strength": false, "issue": "I-TMA-64", "description": "Prohibited sign"},
+      {"strength": false, "issue": "I-TMA-65", "description": "Other prescribed sign (including copyright symbol)"},
+      {"strength": false, "issue": "I-TMA-66", "description": "Registered symbol"},
+      {"strength": false, "issue": "I-TMA-67", "description": "To counterfeit this is a forgery"},
+      {"strength": false, "issue": "I-TMA-68", "description": "Coat of arms, flags, seals - Commonwealth, State or Territory"},
+      {"strength": false, "issue": "I-TMA-69", "description": "Australian flag"},
+      {"strength": false, "issue": "I-TMA-70", "description": "Coat of arms, flags, seals - city, town, public authority"},
+      {"strength": false, "issue": "I-TMA-71", "description": "Flag of a foreign country"},
+      {"strength": false, "issue": "I-TMA-72", "description": "Prescribed sign/symbol (general)"},
+      {"strength": false, "issue": "I-TMA-73", "description": "Hallmark"},
+      {"strength": false, "issue": "I-TMA-74", "description": "Name or symbol of an intergovernmental organisation"},
+      {"strength": false, "issue": "I-TMA-75", "description": "National symbol (of another country)"},
+      {"strength": false, "issue": "I-TMA-76", "description": "Official sign (of another country)"},
+      {"strength": false, "issue": "I-TMA-77", "description": "Prescribed sign/symbol"},
+      {"strength": false, "issue": "I-TMA-78", "description": "Other"}
+    ]
+  },
+  {
+    "groupName": "R-TMA-7",
+    "description": "Section 40",
+    "issues": [
+      {"strength": false, "issue": "I-TMA-79", "description": "Cannot be represented graphically"}
+    ]
+  },
+  {
+    "groupName": "R-TMA-8",
+    "description": "Section 187",
+    "issues": [
+      {"strength": false, "issue": "I-TMA-80", "description": "Missing registered number on which application is based"},
+      {"strength": false, "issue": "I-TMA-81", "description": "Evidence not supplied"},
+      {"strength": false, "issue": "I-TMA-82", "description": "Trade mark is not already registered in applicant's name"},
+      {
+        "strength": false, "issue": "I-TMA-83",
+        "description": "No connection shown between goods/services of defensive & registered trade mark"
+      },
+      {"strength": false, "issue": "I-TMA-84", "description": "Other"}
+    ]
+  },
+  {
+    "groupName": "R-TMA-9",
+    "description": "Series",
+    "issues": [
+      {"strength": false, "issue": "I-TMA-85", "description": "Trade marks in series differ unacceptably"},
+      {"strength": false, "issue": "I-TMA-86", "description": "Other"}
+    ]
+  },
+  {
+    "groupName": "R-TMA-10",
+    "description": "Classification",
+    "issues": [
+      {"strength": false, "issue": "I-TMA-87", "description": "Classification"}
+    ]
+  },
+  {
+    "groupName": "R-TMA-11",
+    "description": "Divisional",
+    "issues": [
+      {"strength": false, "issue": "I-TMA-88", "description": "Divisional trade mark not same as parent"},
+      {"strength": false, "issue": "I-TMA-89", "description": "Parent application not pending at time of filing divisional"},
+      {"strength": false, "issue": "I-TMA-90", "description": "Claim for goods/services not within scope of parent"},
+      {"strength": false, "issue": "I-TMA-91", "description": "Claim for whole of parent goods/services, not some only"},
+      {"strength": false, "issue": "I-TMA-92", "description": "Goods/services to remain in parent application not specified"},
+      {"strength": false, "issue": "I-TMA-93", "description": "Overlap of goods/services to remain in parent application"},
+      {"strength": false, "issue": "I-TMA-94", "description": "Other"}
+    ]
+  },
+  {
+    "groupName": "R-TMA-12",
+    "description": "Convention",
+    "issues": [
+      {"strength": false, "issue": "I-TMA-95", "description": "Claim more than 6 months after foreign application"},
+      {"strength": false, "issue": "I-TMA-96", "description": "Claim made more than 2 days after filing"},
+      {"strength": false, "issue": "I-TMA-97", "description": "Claim where foreign application has different owner"},
+      {"strength": false, "issue": "I-TMA-98", "description": "No number for international application provided"},
+      {"strength": false, "issue": "I-TMA-99", "description": "Other"}
+    ]
+  },
+  {
+    "groupName": "R-TMA-13",
+    "description": "Certification",
+    "issues": [
+      {"strength": false, "issue": "I-TMA-100", "description": "Acceptable rules not provided"},
+      {"strength": false, "issue": "I-TMA-101", "description": "Rules not yet approved by ACCC"}
+    ]
+  },
+  {
+    "groupName": "R-TMA-14",
+    "description": "Formalities",
+    "subGroup": [
+      {
+        "groupName": "R-TMA-14-0",
+        "description": "Ownership",
+        "issues": [
+          {"strength": false, "issue": "I-TMA-102", "description": "ACN or ARBN inconsistent with owner name"},
+          {"strength": false, "issue": "I-TMA-103", "description": "Business name or trading style"},
+          {"strength": false, "issue": "I-TMA-104", "description": "Government department"},
+          {"strength": false, "issue": "I-TMA-105", "description": "General"},
+          {"strength": false, "issue": "I-TMA-106", "description": "Full name not provided"},
+          {"strength": false, "issue": "I-TMA-107", "description": "Partnership"},
+          {"strength": false, "issue": "I-TMA-109", "description": "Trust"},
+          {"strength": false, "issue": "I-TMA-110", "description": "Unincorporated association, society or club"},
+          {"strength": false, "issue": "I-TMA-111", "description": "Standard trade mark application appears to be a collective"}
+        ]
+      },
+      {
+        "groupName": "R-TMA-14-1",
+        "description": "Collective ownership",
+        "issues": [
+          {"strength": false, "issue": "I-TMA-112", "description": "Business name (no legal personality)"},
+          {"strength": false, "issue": "I-TMA-113", "description": "Individual(s) or company"},
+          {"strength": false, "issue": "I-TMA-114", "description": "Other"}
+        ]
+      },
+      {
+        "groupName": "R-TMA-14-2",
+        "description": "Address",
+        "issues": [
+          {"strength": false, "issue": "I-TMA-115", "description": "No contact address"}
+        ]
+      },
+      {
+        "groupName": "R-TMA-14-3",
+        "description": "Address for service",
+        "issues": [
+          {"strength": false, "issue": "I-TMA-116", "description": "No valid address for service"}
+        ]
+      },
+      {
+        "groupName": "R-TMA-14-4",
+        "description": "Translation",
+        "issues": [
+          {"strength": false, "issue": "I-TMA-117", "description": "Transliteration & translation (general)"},
+          {"strength": false, "issue": "I-TMA-118", "description": "Transliteration & translation (Chinese characters)"},
+          {"strength": false, "issue": "I-TMA-119", "description": "Transliteration & translation (Japanese characters)"},
+          {"strength": false, "issue": "I-TMA-121", "description": "Translation required"},
+          {"strength": false, "issue": "I-TMA-120", "description": "Other"}
+        ]
+      },
+      {
+        "groupName": "R-TMA-14-5",
+        "description": "Representation of mark",
+        "issues": [
+          {"strength": false, "issue": "I-TMA-123", "description": "Representation does not show all details"},
+          {"strength": false, "issue": "I-TMA-125", "description": "Description of trade mark (scent mark)"},
+          {"strength": false, "issue": "I-TMA-126", "description": "Identity of person in trade mark"},
+          {"strength": false, "issue": "I-TMA-127", "description": "Consent required to use of signature, name or image of a person"},
+          {"strength": false, "issue": "I-TMA-124", "description": "Other"}
+        ]
+      },
+      {
+        "groupName": "R-TMA-14-6",
+        "description": "Endorsement",
+        "issues": [
+          {"strength": false, "issue": "I-TMA-128", "description": "Description of mark"},
+          {"strength": false, "issue": "I-TMA-139", "description": "Conditions and limitations"},
+          {"strength": false, "issue": "I-TMA-140", "description": "Other"}
+        ]
+      }
+    ]
+  }
+]

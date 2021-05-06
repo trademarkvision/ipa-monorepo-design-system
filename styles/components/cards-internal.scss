@@ -1,0 +1,110 @@
+//cards
+.card {
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  margin-top: 1rem;
+  &.with-content {
+    padding-bottom: 1px;
+  }
+}
+
+.card-header {
+  background-color: #EAEAEA;
+  border-radius: 2px 2px 0 0;
+  color: #0D252C;
+  height: 52px;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+.card-header h4 {
+  font-weight: 600;
+  line-height: 52px;
+  margin: 0;
+}
+
+.action-card .card-header {
+  font-size: 1rem;
+  line-height: 52px;
+  padding: 0 0 0 1rem;
+}
+
+.card:first-child {
+  margin-top: 1rem;
+}
+
+.issue-comments {
+  font-size: 0.9rem;
+}
+
+.services {
+  &.flex-columns {
+    margin-bottom: 2rem;
+  }
+
+  &.light {
+    .link-footer {
+      padding: 1rem;
+      transition: all 0.3s ease;
+    }
+    .content-wrapper .content {
+      padding: 1rem 40px 0.5rem;
+    }
+    .summary {
+      margin: 0 0 1rem;
+      padding: 0 40px;
+    }
+  }
+}
+
+.card-body {
+  margin: 2rem 40px 1.5rem;
+
+  &.no-pad-no-margin {
+    margin: 0;
+    padding: 0;
+
+    .editr {
+      border: 0;
+    }
+
+    .editr--content {
+      font-size: 0.9rem;
+      padding: 2rem 40px !important;
+    }
+
+    .editr--toolbar {
+      height: 40px;
+      line-height: 4;
+      padding-left: 30px;
+      a {
+        height: 40px;
+        line-height: 64px;
+      }
+    }
+  }
+
+  .issue-group-title {
+    border-bottom: 1px solid #EEE;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-bottom: 4px;
+  }
+
+  .editr--content {
+    color: #666666;
+  }
+
+  .align-right {
+    text-align: right;
+    margin-right: 0 !important;
+  }
+
+  .icon-size {
+    color: #1976D2;
+    svg {
+      width: 14.39px;
+    }
+  }
+}

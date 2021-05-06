@@ -1,0 +1,118 @@
+$fontsBasePath: '.' !default;
+$ipaIconPath: $fontsBasePath + '/ipa-icon';
+
+@debug "Importing ipa-icon from " $ipaIconPath;
+
+// Variables
+$chevron-double-left: "\e90a";
+$chevron-double-right: "\e90b";
+$cross-t: "\e900";
+$save-t: "\e901";
+$camera-t: "\e902";
+$search-t: "\e903";
+$home-t: "\e904";
+$text: "\e905";
+$people: "\e906";
+$number: "\e907";
+$chevron-right: "\e908";
+$chevron-left: "\e909";
+
+@font-face {
+  font-family: 'ipa-icon';
+  src: url('#{$ipaIconPath}/ipa-icon.eot?kc4u0w');
+  src: url('#{$ipaIconPath}/ipa-icon.eot?kc4u0w#iefix') format('embedded-opentype'),
+  url('#{$ipaIconPath}/ipa-icon.ttf?kc4u0w') format('truetype'),
+  url('#{$ipaIconPath}/ipa-icon.woff?kc4u0w') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ipa-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'ipa-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  text-rendering: optimizeLegibility;
+
+  &.chevron-double-left {
+    &:before {
+      content: $chevron-double-left;
+    }
+  }
+
+  &.chevron-double-right {
+    &:before {
+      content: $chevron-double-right;
+    }
+  }
+
+  &.cross-t {
+    &:before {
+      content: $cross-t;
+    }
+  }
+
+  &.save-t {
+    &:before {
+      content: $save-t;
+    }
+  }
+
+  &.camera-t {
+    &:before {
+      content: $camera-t;
+    }
+  }
+
+  &.search-t {
+    &:before {
+      content: $search-t;
+    }
+  }
+
+  &.home-t {
+    &:before {
+      content: $home-t;
+    }
+  }
+
+  &.text {
+    &:before {
+      content: $text;
+    }
+  }
+
+  &.people {
+    &:before {
+      content: $people;
+    }
+  }
+
+  &.number {
+    &:before {
+      content: $number;
+    }
+  }
+
+  &.chevron-right {
+    &:before {
+      content: $chevron-right;
+    }
+  }
+
+  &.chevron-left {
+    &:before {
+      content: $chevron-left;
+    }
+  }
+
+}

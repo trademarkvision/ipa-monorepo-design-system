@@ -1,0 +1,227 @@
+//cards
+.card {
+  background-color: $white;
+  border-radius: $borderRadius;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  height: 290px;
+  transition: all 0.3s ease;
+  width: 290px;
+
+  .card-header {
+    background-color: $lightGrey;
+    border-bottom: 3px solid $grey;
+    border-radius: $borderRadius $borderRadius 0 0;
+    height: 52px;
+    line-height: 52px;
+    cursor: pointer;
+
+    h3 {
+      color: $secondary;
+      font-size: 1rem;
+      font-weight: 500;
+      margin: 0 0 0 1rem;
+    }
+  }
+
+  .card-content {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-size: 0.9rem;
+    height: calc(100% - 55px);
+    justify-content: center;
+
+    img {
+      height: 190px;
+    }
+  }
+
+  //**** Styling for card modals ****//
+  &.modal {
+    height: auto !important;
+    width: 460px;
+
+    &:hover {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    .card-header {
+      background-color: $white;
+      border-bottom: 1px solid $lightGrey;
+      color: $dark;
+      display: flex;
+      font-size: 1rem;
+      font-weight: normal;
+      justify-content: space-between;
+      padding: 0 16px;
+    }
+
+    .card-content {
+      display: block;
+      font-size: 0.9rem;
+      padding: 24px 40px 0;
+
+      .bold {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .smaller-text {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .card-footer {
+      margin-top: 1rem;
+      text-align: right;
+      margin-right: 40px;
+      padding-bottom: 1rem;
+
+      button {
+        margin-left: 0.25rem;
+      }
+    }
+  }
+
+  &.full {
+    height: auto;
+    width: 100%;
+
+    &:hover {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    .card-header {
+      background-color: $lightGrey;
+      border-bottom: 0;
+      color: $dark;
+      font-weight: bold;
+      padding-left: 1rem;
+    }
+
+    .card-content {
+      align-items: normal;
+      display: inherit;
+      padding: 2rem 40px 1rem;
+
+      .content-header {
+        align-items: normal;
+        border-bottom: 1px solid $lightGrey;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0.25rem;
+
+        .text {
+          color: $dark;
+        }
+
+        .link {
+          color: $primary;
+
+          span {
+            margin-right: 0.25rem;
+          }
+        }
+      }
+
+      .content-item {
+        color: $darkGrey;
+        display: flex;
+        justify-content: space-between;
+        line-height: 40px;
+        margin-top: 1rem;
+
+        button {
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+//**** modal overlay ****//
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+.close {
+  color: $white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: absolute;
+  transition: all 0.3s ease;
+  right: 2rem;
+  top: 38px;
+
+  &:hover {
+    animation: pulse 1.5s infinite;
+  }
+}
+
+.image-container {
+  background-color: $white;
+  border-radius: $borderRadius;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin: 116px auto 0;
+  text-align: center;
+  width: 800px;
+
+  img {
+    height: 550px;
+    width: auto;
+  }
+}
+
+.image-selector {
+  display: flex;
+  flex-direction: row;
+  height: 119px;
+  justify-content: center;
+  transition: all 0.3s ease;
+  padding-top: 1rem;
+  width: 100vw;
+
+  .image-holder {
+    border-bottom: 0 solid $white;
+    background: $white;
+    border-radius: $borderRadius;
+    cursor: pointer;
+    margin-right: 1rem;
+    transition: all 0.3s ease;
+    width: 100px;
+
+    &:hover,
+    &.activeImage {
+      border-bottom: 3px solid $positive;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    &:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    }
+
+    img {
+      height: 100px;
+      padding: 0.5rem;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
