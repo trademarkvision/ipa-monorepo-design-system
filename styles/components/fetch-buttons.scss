@@ -7,36 +7,47 @@
   cursor: pointer;
   text-decoration: none;
   font-weight: normal;
-  display: inline-block;
   outline: none;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+
   &.small-inline {
     height: 28px;
   }
+
   & + .step-count {
     display: block;
     font-size: .7rem;
     opacity: .5;
   }
+
   svg {
-    padding: 0 0 0 4px;
+    margin-left: 4px;
   }
 }
 
 @mixin button-colorize($base_color, $alt_color, $borderColor: null, $do_hover:true, $do_focus: true, $important: null) {
   border: 1px solid;
+
   @if $borderColor {
     border-color: $borderColor $important;
   } @else {
     border-color: $alt_color $important;
   }
+
   background: $base_color $important;
   color: $alt_color $important;
+
   @if $do_hover {
     &:hover {
       color: $base_color $important;
       background: $alt_color $important;
     }
   }
+
   @if $do_focus {
     &:focus {
       box-shadow: 0 0 2px darken($base_color, 20%) $important;
@@ -138,6 +149,11 @@ input[type="submit"], button, a.button {
     height: 30px;
     padding: 0;
     text-align: center;
+
+    svg {
+      margin: 0;
+      padding: 0;
+    }
   }
 
   &.no-size {

@@ -499,7 +499,7 @@
       }
 
       .comment-container {
-        padding: 2rem 2rem 1rem 2rem;
+        padding: 1rem;
 
         h4 {
           margin-top: 0;

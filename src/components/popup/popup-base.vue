@@ -113,8 +113,7 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      padding: 1rem 40px;
-      width: calc(100% - 80px);
+      padding: 1rem;
 
       button {
         margin: 0 .25rem;
@@ -217,7 +216,7 @@
       }
 
       .body {
-        padding: 1rem 40px 0.5rem;
+        padding: 1rem 1rem 0;
       }
 
       input[type='text'] {
